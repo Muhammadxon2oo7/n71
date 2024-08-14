@@ -1,0 +1,82 @@
+.second__section{
+    padding-top: 128px;
+    .container{
+        .title{
+            @include title(209px);
+        }
+        .cards{
+            width: 100%;
+            .card{
+                @include flex(center,center);
+                .img__wrapper{
+                    width: 100%;
+                    margin-bottom: 24px;
+                    @include flex(center,center);
+                    img{
+                        max-width: 317px;
+                    }
+                }
+                .content__wrapper{
+                    @include flex(center,center);
+                
+                    h3{
+                        width: 100%;
+                        text-align: center;
+                        @include text(700,32px,#828282);
+                        margin-bottom: 16px;
+                    
+                    }
+                    p{
+                        width: 100%;
+                        text-align: center;
+                        @include text(400,18px,#828282);
+                        margin-bottom: 16px;
+    
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 128px;
+                    }
+                    button{
+                        @include btn(160px);
+                        @include text(600,13px,#fff);
+                        text-align: center;
+                        margin: 0 auto;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:768px){
+    .second__section{
+        .container{
+            .cards{
+                .card{
+                    @include flex(unset,center);
+                    gap: 93px;
+                    .img__wrapper{
+                        width: 40%;
+                        // margin-right: 93px;
+                    }
+                    .content__wrapper{
+                        max-width: 635px;
+                        width: 45%;
+                        @include flex(left,center);
+                        h3{
+                            text-align: left;
+                            margin-bottom: 25px;
+                        }
+                        p{
+                            text-align: left;
+                            margin-bottom: 40px;
+                        }
+                        button{
+                            margin: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+footer{
+    padding-top: 64px;
+    padding-bottom: 71px;
+    background-color: #828282;
+    .container{
+        .logo__wrapper{
+            width: 100%;
+            @include flex(center,center);
+            margin-bottom: 32px;
+            img{
+                width: 116px;
+                height: 100%;
+            }
+        }
+        .nav__Wrapper{
+            margin-bottom: 56px;
+            @include flex(center,center);
+        
+            li{
+                width: 100%;
+                text-align: center;
+                a{
+                    @include text(600,13px,#fff)
+                }
+                &:not(:last-child){
+                    margin-bottom: 24px;
+                }
+            }
+        }
+        .round__imgs{
+            width: 100%;
+            @include flex(center,center);
+            .round{
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background-color: #00000071;
+                &:not(:last-child){
+                    margin-right: 24px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:768px){
+    footer{
+        .container{
+            @include flex(unset,center);
+            .logo__wrapper{
+                width: 116px;
+                margin-bottom: 0;
+                margin-right: 38px;
+            }
+            .nav__Wrapper{
+                margin-bottom: 0;
+                @include flex(unset,center);
+                margin-right: 10px;
+                li{
+                    width: auto;
+                    @include flex(unset,center);
+                    &:not(:last-child){
+                        margin-bottom: 0;
+                        margin-right: 30px;
+                    }
+                    
+                }
+            }
+            .round__imgs{
+                @include flex(end,center);
+                width: auto;
+                flex-grow: 1;
+                gap: 10px;
+                // gap: 24px;
+                .round{
+                    margin-right: 0;
+                    &:not(:last-child){
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:992px){
+    footer{
+        .container{
+            .logo__wrapper{
+                margin-right: 48px;
+            }
+            .nav__Wrapper{
+                li{
+                    &:not(:last-child){
+                        margin-bottom: 0;
+                        margin-right: 41px;
+                    }
+                }
+            }
+            .round__imgs{
+                gap: 24px;
+            }
+        }
+    }
+}

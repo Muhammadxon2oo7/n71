@@ -1,0 +1,92 @@
+header{
+    padding-top: 40px;
+    .container{
+        @include flex(space-between,center);
+        .logo_wrapper{
+            width:93px;
+            height: 48px;
+        }
+        
+        .navs{
+            display: none;
+        }
+        .display{
+            @include flex(center,center);
+            width: 100%;
+            background-color: #828282;
+            margin-top: 20px;
+            border-radius: 10px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            ul{
+                width: 100%;
+                @include flex(center,center);
+                li{
+                    width: 100%;
+                    text-align: center;
+                    a{
+                        @include text(600,13px,#fff)   
+                    }
+                }
+            }
+            button{
+                @include btn(98px);
+                height: 40px;
+                margin: 0 auto;
+                background-color: transparent;
+                a{
+                    @include text(600,13px,#fff)
+                }
+            }
+        }
+        .hamburger__wrapper{
+            width: 48px;
+            height: 48px;
+            button{
+                @include btn(48px);
+                @include flex(center,center);
+                height:48px;
+                img{
+                    width: 18px;
+                    height: 14px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:768px){
+    header{
+        .container{
+            .display{
+                all:unset;
+                display: none;
+            }
+            .navs{
+                @include flex(unset,center);
+                ul{
+                    all:unset;
+                    @include flex(unset,center);
+                    margin-right: 40px;
+                    li{
+                        all:unset;
+                        a{
+                            @include text(600,13px,#828282)
+                        }
+                        &:not(:last-child){
+                            margin-right: 41px;
+                        }
+                    }
+                }
+                button{
+                    @include btn(98px);
+                    a{
+                        @include text(600,13px,#fff)
+                    }
+                }
+            }
+            .hamburger__wrapper{
+                display: none;
+            }
+        }
+    }
+}

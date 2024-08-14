@@ -1,0 +1,36 @@
+@mixin text($weight,$size,$color){
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+@mixin btn($w){
+    border-radius: 10px;
+    width: $w;
+    height: 56px;
+    background-color: #B6B6B6;
+    cursor: pointer;
+    &:hover{
+        background-color: #828282;
+    }
+}
+@mixin flex($c,$a){
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $c;
+    align-items: $a;
+}
+@mixin title($m){
+    max-width: 676px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: $m;
+    h2{
+        @include text(700,42px,#828282);
+        margin-bottom: 16px;
+        text-align: center
+    }
+    p{
+        @include text(400,20px,#828282);
+        text-align: center;
+    }
+}

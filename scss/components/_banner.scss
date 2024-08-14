@@ -1,0 +1,68 @@
+.banner{
+    padding-top:64px;
+    .container{
+        @include flex(center,center);
+        .img__wrapper{
+            margin-bottom: 53px;
+        }
+        .content__wrapper{
+            h1{
+                @include text(700,32px,#828282);
+                text-align: center;
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            p{
+                @include text(400,18px,#828282);
+                text-align:center;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            .btns{
+                width: 100%;
+                text-align: center;
+                button{
+                    @include btn(212px);
+                    @include text(600,13,#fff);
+                    cursor: pointer;
+                    &:not(:last-child){
+                        margin-bottom: 21px;
+                    }
+                    &:hover{
+                        background-color: #828282;
+                    }
+
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width:768px){
+    .banner{
+        .container{
+            @include flex(space-between,center);
+            flex-direction: row-reverse;
+            .img__wrapper{
+                width: 40%;
+                
+            }
+            .content__wrapper{
+                max-width: 635px;
+                width: 50%;
+                h1{
+                    text-align: left;
+                }
+                p{
+                    text-align: left;
+                }
+                .btns{
+                    width: 100%;
+                    text-align: left;
+                    display: flex;
+                    gap: 20px;
+
+                }
+            }
+        }
+    }
+}
